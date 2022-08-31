@@ -1,0 +1,10 @@
+---
+ - hosts: db-server
+   tasks:
+    - copy: src=/home/admin/SUMNE dest=/home/admin/
+    - command: mkdir /home/admin/SUMNE
+
+ - hosts: app-server
+   tasks:
+    - copy: src=/home/admin/AAUpendransible.txt dest=/home/admin
+

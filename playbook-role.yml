@@ -1,0 +1,9 @@
+---
+- hosts: all
+  remote_user: admin
+#  vars_files:
+#    - secrets.yml
+
+  roles:
+    - install
+    - copy

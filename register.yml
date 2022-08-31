@@ -1,0 +1,11 @@
+---
+  - hosts: test-server
+    tasks:
+     #- shell: ls /tmp
+      - shell: ls /home/admin
+        register: out
+
+      - debug:
+          msg: "{{out.stdout_lines}}"
+
+

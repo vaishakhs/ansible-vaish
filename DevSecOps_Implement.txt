@@ -1,0 +1,36 @@
+Method-1-------------------------------------------------------------------------
+
+Create var.yml file which containing important passwords:
+
+	sudo ansible-vault encrypt roles/copy/vars/main.yml - provide password and Encrypt it
+
+--/or/--To create new file and encrypt it.
+
+	sudo ansible-vault create secrets.yml - provide password when prompted
+ 
+while running playbook if you get permission denied error change the file permission.
+	
+	sudo chown ansadmin:ansadmin /etc/ansible/secrets.yml
+ 
+---------------
+ Finally execute the playbook using command :
+ 
+	ansible-playbook --ask-vault httpd-files.yml -b   
+	
+	[-b to get sudo access to start and stop services ]
+	
+Method-2------------------------------------------------------------------------------------
+
+ To avoid exposure of my password i will encrypt variables.yml
+ Command: sudo ansible-vault encrypt httpd-variables.yml 
+          provide password when prompted == > Encryption successful
+          
+You will permission denied but still if you want to run decrypt and execute but still there will be error
+
+To view the file : ansible-vault view httpd-files.yml
+
+To edit the file : sudo ansible-vault edit httpd-files.yml
+
+To decrypt the file : sudo ansible-vault decrypt --ask-vault-pass httpd-files.yml
+
+------------------------------------------------------------------------------------------

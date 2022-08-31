@@ -1,0 +1,9 @@
+---
+ - name: Pinging all the nodes in the hostfile
+   hosts: all
+   tasks:
+     - name: Ping to All Nodes
+       ping:
+
+
+

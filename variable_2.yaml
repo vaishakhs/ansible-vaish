@@ -1,0 +1,12 @@
+---
+ - name: variable-playbook
+   hosts: test-server
+   vars_files: 
+     - "./vars.yml"
+   tasks:
+     - name: using debug module
+       debug:
+         msg: "The value of number is: {{ age }}"
+     - name: using debug module for name
+       debug:
+         msg: "Hello {{ name }} !!!"

@@ -1,0 +1,8 @@
+Hi
+Hi for Second test
+
+Hi this calling from variable file.
+
+Fully Secured Ansible Roles and Handler and Mainly Vars files containing Password.
+
+------------------31-08-22 Happy Gowri Ganesh Festival Ellarigu olledagli ----

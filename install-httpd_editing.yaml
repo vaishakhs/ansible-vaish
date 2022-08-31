@@ -1,0 +1,12 @@
+---
+- name: Server Details
+  hosts: test-server
+  remote_user: admin
+  become: yes
+
+  tasks:
+  - name: Remove httpd
+    yum: pkg=httpd state=absent
+
+#  - name: Install httpd
+#    yum: pkg=httpd state=present

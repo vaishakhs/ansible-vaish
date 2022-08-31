@@ -1,0 +1,11 @@
+---
+# tasks file for copy
+
+- name: Copying your php file in the vaish.txt
+  copy:
+    src: "{{ src_path }}"
+    dest: "{{ dest_path }}"
+    force: yes
+  
+  notify:
+      - restart httpd service
